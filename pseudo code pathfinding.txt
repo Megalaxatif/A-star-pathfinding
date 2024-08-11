@@ -1,0 +1,33 @@
+<Path finding>
+
+
+
+struct cell{
+	int posx
+	int posy
+	int F_cost = sqrt( (x+end_cell_posx)²+(y+end_cell_posy)²) // distance between the cell and the end cell
+	int H_cost =sqrt( (x + start_cell_posx)² + (y + start_cell_posy)²) // distance between the cell and the starting cell
+	int G_cost // F cost + H cost
+}
+
+int posx
+int posy
+
+array OPEN // the cells we are looking at
+array CHOSEN // chosen cells
+
+
+while not find
+	add surounding cells to OPEN
+	add the OPEN cell with the lowest G cost to CHOSEN, priorityse the cell with the lowest F cost
+	posx = new_chosen_cell_posx
+	posy = new_chosen_cell_posy
+	if posx = end_cell_posx && posy = end_cell_posy:
+		find = true
+
+
+
+	
+	
+
+

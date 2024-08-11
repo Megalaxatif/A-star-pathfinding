@@ -1,5 +1,5 @@
-CMakeFiles/Prog.dir/main.cpp.obj: \
- C:/Users/mrmeg/Documents/code/pathfinding/A-star-pathfinding/main.cpp \
+CMakeFiles/Prog.dir/func.cpp.obj: \
+ C:/Users/mrmeg/Documents/code/pathfinding/A-star-pathfinding/func.cpp \
  C:/Users/mrmeg/Documents/code/pathfinding/A-star-pathfinding/func.h \
  C:/Users/mrmeg/Programme/winlibs-x86_64-posix-seh-gcc-13.2.0-mingw-w64ucrt-11.0.1-r5/mingw64/include/c++/13.2.0/iostream \
  C:/Users/mrmeg/Programme/winlibs-x86_64-posix-seh-gcc-13.2.0-mingw-w64ucrt-11.0.1-r5/mingw64/include/c++/13.2.0/bits/requires_hosted.h \
