@@ -129,6 +129,30 @@ Prog/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Prog.dir/build.make CMakeFiles/Prog.dir/build
 .PHONY : Prog/fast
 
+cell.obj: cell.cpp.obj
+.PHONY : cell.obj
+
+# target to build an object file
+cell.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Prog.dir/build.make CMakeFiles/Prog.dir/cell.cpp.obj
+.PHONY : cell.cpp.obj
+
+cell.i: cell.cpp.i
+.PHONY : cell.i
+
+# target to preprocess a source file
+cell.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Prog.dir/build.make CMakeFiles/Prog.dir/cell.cpp.i
+.PHONY : cell.cpp.i
+
+cell.s: cell.cpp.s
+.PHONY : cell.s
+
+# target to generate assembly for a file
+cell.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Prog.dir/build.make CMakeFiles/Prog.dir/cell.cpp.s
+.PHONY : cell.cpp.s
+
 func.obj: func.cpp.obj
 .PHONY : func.obj
 
@@ -186,6 +210,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Prog"
+	@echo "... cell.obj"
+	@echo "... cell.i"
+	@echo "... cell.s"
 	@echo "... func.obj"
 	@echo "... func.i"
 	@echo "... func.s"

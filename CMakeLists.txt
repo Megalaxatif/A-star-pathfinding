@@ -4,4 +4,4 @@ set(EXEC_NAME "Prog")
 
 project(A-star_pathfinding)
 
-add_executable(${EXEC_NAME} main.cpp func.cpp)
+add_executable(${EXEC_NAME} main.cpp func.cpp cell.cpp)
