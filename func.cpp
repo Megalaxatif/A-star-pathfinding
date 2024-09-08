@@ -10,10 +10,11 @@ void goto_(int x, int y){
 void draw_board(){
     for (int i = 0; i < HEIGHT; i++){
         for(int j = 0; j < LENGTH; j++){
-            DRAW_CALL(maze[i][j].get_type(), "    ", j*4, i*2);
+            DRAW_CALL(maze[i][j].get_type(), "    ", j*4, i*2)
         }
         std::cout << "\n";
     }
+    std::cout << "\n";
 }
 
 void create_board(){
@@ -23,27 +24,50 @@ void create_board(){
         }
     }
 }
+void draw_array(){
+    for (int i = 0; i < HEIGHT; i++){
+        for(int j = 0; j < LENGTH; j++){
+            std::cout << array[i][j];
+        }
+        std::cout << "\n";
+    }
+}
+
+void set_start_coord(int x, int y){
+    maze[x][y].setType((unsigned short)CELL::START_CELL);
+    start_cell = maze[x][y];
+    draw_board();
+}
+
+void set_end_coord( int x, int y){
+    maze[x][y].setType((unsigned short)CELL::END_CELL);
+    end_cell = maze[x][y];
+    draw_board();
+}
 
 HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
 
-unsigned int start_cell_posx, start_cell_posy = 1;
-unsigned int end_cell_posx, end_cell_posy = 0;
+cell start_cell;
+cell end_cell;
 
 
 unsigned int text_attribute[] = {
-    BACKGROUND_GREEN | BACKGROUND_INTENSITY,                                    // empty space
+    FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE,                        // undiscovered cell
     BACKGROUND_INTENSITY | BACKGROUND_RED | BACKGROUND_GREEN | BACKGROUND_BLUE, // border
-    FOREGROUND_RED | BACKGROUND_RED | BACKGROUND_INTENSITY,                     // start cell
-    BACKGROUND_BLUE | FOREGROUND_BLUE | FOREGROUND_INTENSITY                    // end cell
+    BACKGROUND_BLUE | FOREGROUND_BLUE | FOREGROUND_INTENSITY,                   // start cell
+    BACKGROUND_BLUE | FOREGROUND_BLUE | FOREGROUND_INTENSITY,                   // end cell
+    FOREGROUND_RED | BACKGROUND_RED | BACKGROUND_INTENSITY,                     // chosen cell
+    BACKGROUND_GREEN                                                            // open cell
 };
 
 unsigned short array[HEIGHT][LENGTH] = {
-    3, 0, 0, 0, 0, 0,
-    1, 1, 1, 0, 0, 0,
-    0, 0, 0, 0, 1, 0,
-    0, 1, 0, 1, 0, 0,
-    0, 0, 0, 0, 2, 0,
-    0, 0, 0, 0, 0, 0
+    1, 1, 1, 1, 1, 1, 1,
+    1, 0, 0, 0, 0, 0, 1,
+    1, 1, 1, 0, 1, 0, 1,
+    1, 0, 0, 0, 0, 0, 1,
+    1, 1, 0, 1, 0, 0, 1,
+    1, 0, 0, 0, 0, 0, 1,
+    1, 1, 1, 1, 1, 1, 1
 };
 
 cell maze[HEIGHT][LENGTH] = {cell()};

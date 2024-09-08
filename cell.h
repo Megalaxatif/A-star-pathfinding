@@ -14,6 +14,7 @@ class cell{
         inline int getGcost() {return G_cost;}
         inline cell* getParentCell() {return parent_cell;}
         inline void setParentCell(cell *cell_) {parent_cell = cell_;}
+        inline void setType(unsigned short type_) {type = type_;}
     private:
         int x = 0;
         int y = 0;
@@ -24,3 +25,5 @@ class cell{
         cell *parent_cell;
 }; 
 std::vector<cell*> AstarPathfinding(cell *start, cell *end);
+bool findNewOpenCell(cell *cell_);
+void includeCell(cell* cell_, cell* parent_cell);
