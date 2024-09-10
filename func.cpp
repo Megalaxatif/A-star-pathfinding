@@ -1,5 +1,12 @@
 #include "func.h"
 
+cell maze[HEIGHT][LENGTH] = {cell()};
+
+cell *start_cell = &maze[5][5];
+cell *end_cell  = &maze[1][1];
+
+HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
+
 void goto_(int x, int y){
     COORD coord;
     coord.X = x;
@@ -33,24 +40,6 @@ void draw_array(){
     }
 }
 
-void set_start_coord(int x, int y){
-    maze[x][y].setType((unsigned short)CELL::START_CELL);
-    start_cell = maze[x][y];
-    draw_board();
-}
-
-void set_end_coord( int x, int y){
-    maze[x][y].setType((unsigned short)CELL::END_CELL);
-    end_cell = maze[x][y];
-    draw_board();
-}
-
-HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
-
-cell start_cell;
-cell end_cell;
-
-
 unsigned int text_attribute[] = {
     FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE,                        // undiscovered cell
     BACKGROUND_INTENSITY | BACKGROUND_RED | BACKGROUND_GREEN | BACKGROUND_BLUE, // border
@@ -62,12 +51,12 @@ unsigned int text_attribute[] = {
 
 unsigned short array[HEIGHT][LENGTH] = {
     1, 1, 1, 1, 1, 1, 1,
-    1, 0, 0, 0, 0, 0, 1,
-    1, 1, 1, 0, 1, 0, 1,
-    1, 0, 0, 0, 0, 0, 1,
-    1, 1, 0, 1, 0, 0, 1,
-    1, 0, 0, 0, 0, 0, 1,
+    1, 0, 1, 0, 0, 0, 1,
+    1, 0, 1, 0, 1, 0, 1,
+    1, 0, 1, 1, 0, 0, 1,
+    1, 1, 0, 0, 1, 0, 1,
+    1, 0, 0, 0, 1, 0, 1,
     1, 1, 1, 1, 1, 1, 1
 };
 
-cell maze[HEIGHT][LENGTH] = {cell()};
+
