@@ -1,4 +1,4 @@
-set(CMAKE_RC_COMPILER "C:/Users/mrmeg/Programme/winlibs-x86_64-posix-seh-gcc-13.2.0-mingw-w64ucrt-11.0.1-r5/mingw64/bin/windres.exe")
+set(CMAKE_RC_COMPILER "C:/MinGW/mingw64/bin/windres.exe")
 set(CMAKE_RC_COMPILER_ARG1 "")
 set(CMAKE_RC_COMPILER_LOADED 1)
 set(CMAKE_RC_SOURCE_FILE_EXTENSIONS rc;RC)

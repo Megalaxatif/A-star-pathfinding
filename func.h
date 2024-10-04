@@ -19,21 +19,18 @@ void goto_(int x, int y);
 void create_board();
 void draw_board();
 void draw_array();
-void set_end_coord( int x, int y);
-void set_start_coord(int x, int y);
 
 extern HANDLE console;
 
-extern cell start_cell;
-extern cell end_cell;
-
 const unsigned int LENGTH = 7;
 const unsigned int HEIGHT = 7;
-
  
 extern unsigned int text_attribute[];
 extern unsigned short array[HEIGHT][LENGTH];
-extern cell maze[HEIGHT][LENGTH]; // initialise maze
+extern cell maze[HEIGHT][LENGTH];
+
+extern cell* start_cell;
+extern cell* end_cell;
 
 enum class CELL{
     EMPTY_SPACE = 0,

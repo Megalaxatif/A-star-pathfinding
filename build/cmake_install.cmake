@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/mrmeg/Documents/code/pathfinding/A-star-pathfinding
+# Install script for directory: D:/Ethan/Projets/Code/A star pathfinding
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Users/mrmeg/Programme/winlibs-x86_64-posix-seh-gcc-13.2.0-mingw-w64ucrt-11.0.1-r5/mingw64/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "C:/MinGW/mingw64/bin/objdump.exe")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/mrmeg/Documents/code/pathfinding/A-star-pathfinding/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/Ethan/Projets/Code/A star pathfinding/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
