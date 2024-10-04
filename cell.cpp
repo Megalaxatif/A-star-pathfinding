@@ -89,7 +89,10 @@ std::vector<cell*> AstarPathfinding(cell *start_cell, cell *end_cell){
             cell *current_ = end_cell; // initialise the current-cell to the end cell
             path.push_back(end_cell); // put the end cell at the first place in the path vector
             // find the way back with the parent cells
-            while(1){
+
+            //THE LOOP DOESN'T WORK !! HAVE TO FIX THIS---------------------
+
+            while(1){ 
                 std::cout << "in the loop";
                 path.push_back(current_->getParentCell());
                 //std::cout << path.size() << " ";
