@@ -2,9 +2,7 @@
 
 #include <iostream>
 #include <windows.h>
-#include <cmath>
-#include "cell.h"
-
+#include <header/cell.h>
 
 #define DRAW_CALL(c, t, x, y) {\
     SetConsoleTextAttribute(console, text_attribute[c]);\
@@ -29,8 +27,6 @@ extern unsigned int text_attribute[];
 extern unsigned short array[HEIGHT][LENGTH];
 extern cell maze[HEIGHT][LENGTH];
 
-extern cell* start_cell;
-extern cell* end_cell;
 
 enum class CELL{
     EMPTY_SPACE = 0,

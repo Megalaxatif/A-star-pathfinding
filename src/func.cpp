@@ -1,9 +1,6 @@
-#include "func.h"
+#include <header/func.h>
 
 cell maze[HEIGHT][LENGTH] = {cell()};
-
-cell *start_cell = &maze[5][5];
-cell *end_cell  = &maze[1][1];
 
 HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
 
@@ -53,7 +50,7 @@ unsigned short array[HEIGHT][LENGTH] = {
     1, 1, 1, 1, 1, 1, 1,
     1, 0, 1, 0, 0, 0, 1,
     1, 0, 1, 0, 1, 0, 1,
-    1, 0, 1, 1, 0, 0, 1,
+    1, 0, 1, 0, 0, 0, 1,
     1, 1, 0, 0, 1, 0, 1,
     1, 0, 0, 0, 1, 0, 1,
     1, 1, 1, 1, 1, 1, 1

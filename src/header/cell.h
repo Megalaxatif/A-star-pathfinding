@@ -24,6 +24,3 @@ class cell{
         unsigned short type = 0;
         cell *parent_cell;
 }; 
-std::vector<cell*> AstarPathfinding(cell *start, cell *end);
-bool findNewOpenCell(cell *cell_);
-void includeCell(cell* cell_, cell* parent_cell);
